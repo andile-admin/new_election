@@ -1,0 +1,2 @@
+Attempting to connect to yworld db
+Could not connect: 
