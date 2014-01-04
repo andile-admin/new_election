@@ -62,6 +62,7 @@ get_header(); ?>
                                             }
                                         }
                                         echo '<td class="voting-percentage">' . $perc_row . ' %</td>';
+                                        echo '<td class="voting-percentage-image"><img src="'.$site_link . '/wp-content/themes/twentytwelve/images/11-20.png"/></td>';
                                         echo '</tr>';
                                         $i++;
                                     }

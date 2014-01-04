@@ -312,6 +312,20 @@ input[type="reset"]:active {
 	padding: 0;
 }
 
+/*********Margins****************/
+
+.margin-10{margin-top: 10px;}
+.margin-20{margin-top: 20px;}
+.margin-30{margin-top: 30px;}
+.margin-40{margin-top: 40px;}
+.margin-50{margin-top: 50px;}
+.margin-60{margin-top: 60px;}
+.margin-70{margin-top: 70px;}
+.margin-80{margin-top: 80px;}
+.margin-90{margin-top: 90px;}
+.margin-100{margin-top: 100px;}
+
+
 /* Responsive images */
 .entry-content img,
 .comment-content img,
@@ -2268,6 +2282,8 @@ input[type="radio"]{
 
 .voting-percentage{width: 19.5%; height: 40px; vertical-align: middle; font-size: 15px;}
 
+.voting-percentage-image{width: 19.5%; height: 11px; vertical-align: middle;}
+
 /*Overiding facebook styles*/
 
 .mvs.pam.uiBoxYellow,
@@ -2335,6 +2351,15 @@ input[type="radio"]{
 
 
 /********ABOUT PAGE****/
+
+#about-page-image{
+	width: 100%;
+	height: 326px;
+	background-repeat: no-repeat;
+	background-image: url(../twentytwelve/images/june_16_mayibuye.jpg);
+	background-size: 100%;
+}
+
 #about-page{
 	width: 80%;
 	/*float: left;*/
@@ -2351,7 +2376,13 @@ input[type="radio"]{
 }
 
 .about-container-outer{
-
+	width: 80%;
+	height: auto;
+	min-height: 780px;	
+	margin: 0 auto;
+	background: #fff;
+	padding: 10px;
+	color: #000;
 }
 
 .comments_template{
@@ -2369,6 +2400,18 @@ input[type="radio"]{
 	display: none;
 }
 
+#image-left-1{
+	float: left;
+	padding-right: 10px;
+	/*width: 40%;*/
+	height: 326px;
+}
+
+#image-left-2{
+	float: left;
+	/*width: 40%;*/
+	height: 326px;
+}
 /*******Timer modifications*******/
 
 .carbonite-dash.carbonite-seconds_dash{
@@ -3561,17 +3604,26 @@ line-height: 30px;
 
 
 .sharing-icons{
-	float: left;
-	margin-top: 20px;
+	margin-right: 100px;
+	float: right;
+	margin-top: 2px;
 	margin-bottom: 20px;
 }
 
 #redessociales {
+  width: 65px;
+  height: 65px;
+  border-radius: 65px;
+  border: 1px solid #000;
+  background: url(../twentytwelve/images/share_02.gif);
+}
+
+#redessociales:hover {
   width: 64px;
   height: 64px;
-  border-radius: 75px;
+  border-radius: 64px;
   /*border: 5px solid #fff;*/
-  background: url(http://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg)
+  background: url(../twentytwelve/images/share_01.gif);
 }
 
 .smedia {
@@ -3584,10 +3636,16 @@ line-height: 30px;
   width: 46px;
   height: 46px;
   z-index: 100;
-  margin:10px 0px 0px 20px;
+  margin:0px 0px 0px 0px;
   text-indent: -9999px;
   background: no-repeat;
-  left:3px;
+  right:3px;
+
+  -webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
 }
 
 #redessociales:hover .smedia {
@@ -3596,43 +3654,89 @@ line-height: 30px;
   -webkit-transform: translate(0px,0);
   -o-transform: translate(0px,0); 
   -moz-transform: translate(0px,0);
-  margin:20px 0px 0px 20px;
+  margin:0px 0px 0px 0px;
   position: absolute;
 }
 #redessociales:hover .smedia:nth-child(1) {
   position: absolute;
-  left:95px;
+  right:295px;
 }
 
 #redessociales:hover .smedia:nth-child(2) {
   position: absolute;
-  left:155px;
+  right:365px;
 }
 #redessociales:hover .smedia:nth-child(3) {
   position: absolute;
-  left:200px;
+  right:435px;
 }
 #redessociales:hover .smedia:nth-child(4) {
   position: absolute;
-  left:245px;
+  right:430px;
 }
 #redessociales:hover .smedia:nth-child(5) {
   position: absolute;
-  left:300px;
+  right:565px;
 }
 
 #redessociales:hover .smedia:nth-child(6) {
   position: absolute;
-  left:355px;
+  right:600px;
 }
 
 .smedia.facebook {
-    background: url(http://4.bp.blogspot.com/-49s_0_9mdVo/UWHsMIvJBNI/AAAAAAAABn8/6bVMlN4Qz7Y/s1600/bubble_facebook_share_button.png);
+    background: url(../twentytwelve/images/fb_01.gif);
+    width: 64px;
+  	height: 64px;
+}
+
+.smedia.facebook:hover {
+    background: url(../twentytwelve/images/fb_02.gif);
+    width: 64px;
+  	height: 64px;
+  	background-position: 0px -65px;
+  	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);
+  	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
 }
 .smedia.twitter {
-    background: url(http://2.bp.blogspot.com/-3r8sHe1Qy5M/UWHsNMDDzHI/AAAAAAAABog/q3V7mYirmOY/s1600/bubble_twitter_share_button.png);
+    background: url(../twentytwelve/images/twit_01.gif);
+    width: 64px;
+  	height: 64px;
 }
-.smedia.email {
+.smedia.twitter:hover {
+    background: url(../twentytwelve/images/twit_02.gif);
+    width: 64px;
+  	height: 64px;
+  	background-position: 0px -65px;
+  	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);
+  	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+.smedia.gplus {
+    width: 64px;
+  	height: 64px;
+    background: url(../twentytwelve/images/google_01.gif);
+}
+.smedia.gplus:hover {
+	background: url(../twentytwelve/images/google_02.gif);
+    width: 64px;
+  	height: 64px;
+  	background-position: 0px -65px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);
+    -webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+/*.smedia.email {
     background: url(http://3.bp.blogspot.com/-ZhFqBhp79cA/UWHsMBmPxsI/AAAAAAAABn4/O8k_pGf1oCU/s1600/bubble_email_share_button.png);
 }
 .smedia.instagram {
@@ -3644,8 +3748,10 @@ line-height: 30px;
 .smedia.vimeo {
     background: url(http://2.bp.blogspot.com/-01SWPeX-584/UWHsNim9CAI/AAAAAAAABo4/Z9jMox_9UrE/s1600/bubble_vimeo_share_button.png);
 }
+*/
+
 .smedia:hover {
-    background-position: 0 -46px;
+    /*background-position: 0 -46px;*/
 }
 
 

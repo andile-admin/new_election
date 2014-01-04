@@ -16,9 +16,9 @@
 		<div class="sharing-icons">
 			<span class="share-this">Share this</span>
 			 <div id="redessociales">
-		          <a class="smedia facebook" href="https://www.facebook.com/josernitos">Uno</a>
-		          <a class="smedia twitter" href="http://www.twitter.com/josernitos">Dos</a>
-		          <a class="smedia instagram" href="#">Tres</a>
+		          <a class="smedia facebook" title="Share on facebook" href="https://www.facebook.com/josernitos">Uno</a>
+		          <a class="smedia twitter" title="Share on twitter" href="http://www.twitter.com/josernitos">Dos</a>
+		          <a class="smedia gplus" title="Share on google" href="#">Tres</a>
 			</div>
 		</div>
 
