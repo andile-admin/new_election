@@ -4,6 +4,8 @@ Template Name: Stats
 */
 get_header(); ?>
 
+<div id="main" class="wrapper-home">
+
 <div class="title-section">
     <p>»Statistics</p>
 </div>
@@ -33,9 +35,58 @@ get_header(); ?>
                                         echo $count;
                                     }
                                     */
-                                    //$total = mysql_query("SELECT SUM(votecount) AS total_count FROM wp_colorcounter");
-                                    //$row = mysql_fetch_assoc($total); 
-                                    //$sum = $row['total_count'];
+
+                                    function demographics($perc_value)
+                                    {
+                                        $link_url = get_bloginfo('url');
+
+                                        if($perc_value < 10)
+                                        {
+                                            $value = '<img src="'. $link_url . '/wp-content/themes/twentytwelve/images/0-10.png"/>';
+                                        }
+                                        else if($perc_value > 10 && $perc_value <= 20)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/11-20.png"/>'; 
+                                        }
+                                         else if($perc_value > 20 && $perc_value <= 30)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/21-30.png"/>'; 
+                                        }
+                                         else if($perc_value > 30 && $perc_value <= 40)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/31-40.png"/>'; 
+                                        }
+                                         else if($perc_value > 40 && $perc_value <= 50)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/41-50.png"/>'; 
+                                        }
+                                         else if($perc_value > 50 && $perc_value <= 60)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/51-60.png"/>'; 
+                                        }
+                                         else if($perc_value > 60 && $perc_value <= 70)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/61-70.png"/>'; 
+                                        }
+                                         else if($perc_value > 70 && $perc_value <= 80)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/71-80.png"/>'; 
+                                        }
+                                         else if($perc_value > 80 && $perc_value <= 90)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/81-90.png"/>'; 
+                                        }
+                                        else if($perc_value > 90 && $perc_value <= 100)
+                                        {
+                                            $value = '<img src="'.$link_url . '/wp-content/themes/twentytwelve/images/91-100.png"/>'; 
+                                        }
+
+                                        return $value;
+                                    }
+
+                                    $total = mysql_query("SELECT SUM(votecount) AS total_count FROM wp_colorcounter");
+                                    $row = mysql_fetch_assoc($total); 
+                                    $sum = $row['total_count'];
                                     //var_dump($sum);
                                     
 
@@ -55,14 +106,26 @@ get_header(); ?>
                                         echo '<td class="voting-v">' . $row['votecount'] . ' <span style="">votes</span></td>';
                                         //$vote = $row['votecount'];
                                         //$percent = percent($row['votecount'], $sum);
-                                        $percentage = mysql_query("SELECT partyname,((votecount * 100) / (SELECT MAX( votecount ) FROM wp_colorcounter )) FROM wp_colorcounter AS perc");
-                                        while ($row1 = mysql_fetch_array($percentage)) {
+                                        //$percentage = mysql_query("SELECT partyname,((votecount * 100) / (SELECT MAX( votecount ) FROM wp_colorcounter )) FROM wp_colorcounter AS perc");
+                                        /*while ($row1 = mysql_fetch_array($percentage)) {
                                             if($row['partyname']==$row1[0]){
                                                 $perc_row = $row1[1];
                                             }
                                         }
-                                        echo '<td class="voting-percentage">' . $perc_row . ' %</td>';
-                                        echo '<td class="voting-percentage-image"><img src="'.$site_link . '/wp-content/themes/twentytwelve/images/11-20.png"/></td>';
+                                        */
+                                        $the_perc = $row['votecount'] / $sum * 100;
+                                        $final_perc = number_format($the_perc, 2);
+
+                                        $demogr = demographics($final_perc);
+
+                                        //var_dump($demo);
+                                        $check=0;
+                                        if($check<1){
+                                            echo '<td class="leader-image"><img src="'.$site_link. '/wp-content/themes/twentytwelve/images/rounded_faces_30.png" /></td>';
+                                            $check++;
+                                        }else{}
+                                        echo '<td class="voting-percentage-image">' .$demogr. '</td>';
+                                        echo '<td class="voting-percentage">0 - ' . $final_perc . ' %</td>';
                                         echo '</tr>';
                                         $i++;
                                     }

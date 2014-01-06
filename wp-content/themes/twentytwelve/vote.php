@@ -1,7 +1,6 @@
 <?php /* Template Name: Vote */ ?>
-<?php global $asteria;?>
 <?php get_header(); ?>
-
+<div id="main" class="wrapper-home">
 <div class="title-section">
     <p>
         <?php wp_title();?>

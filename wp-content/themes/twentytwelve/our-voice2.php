@@ -3,9 +3,8 @@
 Template Name: Our Voice Template
 */
 ?>
-<?php global $asteria;?>
 <?php get_header(); ?>
-
+<div id="main" class="wrapper">
 <div class="title-section">
     <p><?php wp_title();?></p>
 </div>

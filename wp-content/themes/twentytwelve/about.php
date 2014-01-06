@@ -3,6 +3,7 @@
 Template Name: about page
 */
 get_header(); ?>
+<div id="main" class="wrapper">
 
     <div class="title-section">
         <p>»About</p>

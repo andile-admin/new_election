@@ -634,12 +634,14 @@ section[role="banner"] {
 }
 .widget-area .widget h3 {
 	padding: 0px;
+	color: #183757;
 	margin-bottom: 0;
 	margin-bottom: 0;
 }
 .widget-area .widget p,
 .widget-area .widget li,
 .widget-area .widget .textwidget {
+	color: #183757;
 	font-size: 13px;
 	padding-top: 10px;
 	font-size: 0.928571429rem;
@@ -700,7 +702,7 @@ footer[role="contentinfo"] a:hover {
 	padding:25px 0; 
 	float:left; 
 	margin: 0 auto; 
-	background:#183757; 
+	/*background:#183757;*/ 
 	/*height: 116px; 
 	margin-left: 8%;*/
 }
@@ -1469,7 +1471,7 @@ img#wpstats {
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -1799,7 +1801,8 @@ img#wpstats {
 
 .home-container-outer{
 	/*margin-left: 10%;*/
-	background: #183757;
+	background: #fff;
+	color: #183757;
 	width: 90%;
 	padding: 30px 20px 0;
 }
@@ -1838,7 +1841,7 @@ img#wpstats {
 /* Manifestos Page*/
 
 #container3 {
-   background: #183757;
+   /*background: #183757;*/
 margin: 0 14%;
 text-align: center;
 width: 72%;
@@ -1956,6 +1959,18 @@ margin-top: -17px;
 	height: 30px;
 	vertical-align: middle;
 	padding-right: 10px;
+}
+
+.elections-question{
+	color: #396a9d;
+	font-weight: bold;
+}
+.y-elections{
+	color: #183757;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 
 /********Flip Effect************/
@@ -2273,7 +2288,7 @@ input[type="radio"]{
 
 
 .voting-num{width: 2.5%; height: 40px; vertical-align: middle; font-size: 15px;}
-.voting-img{width: 3.5%; height: 40px; vertical-align: middle; font-size: 30px;}
+.voting-img{width: 8.5%; height: 40px; vertical-align: middle; font-size: 30px;}
 .voting-img img{
 	max-width:70%;
 }
@@ -2283,6 +2298,8 @@ input[type="radio"]{
 .voting-percentage{width: 19.5%; height: 40px; vertical-align: middle; font-size: 15px;}
 
 .voting-percentage-image{width: 19.5%; height: 11px; vertical-align: middle;}
+
+.leader-image{width: 19.5%; height: 11px; vertical-align: middle;}
 
 /*Overiding facebook styles*/
 
@@ -2297,10 +2314,10 @@ input[type="radio"]{
 /***********VOTING**************/
 
 #voting-container{
-	   background: none repeat scroll 0% 0% rgb(24, 55, 87);
+	   /*background: none repeat scroll 0% 0% rgb(24, 55, 87);*/
     margin: 40px 14%;
     text-align: center;
-    width: 72%;
+    width: 80%;
     float: left;
     padding-bottom: 60px;
 }
@@ -2321,7 +2338,7 @@ input[type="radio"]{
 
 .voting-r{
 	font-size: 14px;
-	color: #fff;
+	color: #000;
 	font-family: arial;
 	padding: 10px;
 }
@@ -2351,10 +2368,13 @@ input[type="radio"]{
 
 
 /********ABOUT PAGE****/
+.wrapper{
+	background: #dedddd;
+}
 
 #about-page-image{
 	width: 100%;
-	height: 326px;
+	/*height: 326px;*/
 	background-repeat: no-repeat;
 	background-image: url(../twentytwelve/images/june_16_mayibuye.jpg);
 	background-size: 100%;
@@ -2364,12 +2384,12 @@ input[type="radio"]{
 	width: 80%;
 	/*float: left;*/
 	margin: 0 auto;
-	background: #183757;
-	min-height: 500px;
+	background: #fff;
+	min-height: 1050px;
 	height: auto;
 	margin-top: 10%;
-	padding: 20px;
-	    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+	/*padding: 20px;*/
+	   /* background: none repeat scroll 0% 0% rgb(24, 55, 87);*/
     margin: 40px 14%;
     width: 72%;
     float: left;
@@ -2383,6 +2403,7 @@ input[type="radio"]{
 	background: #fff;
 	padding: 10px;
 	color: #000;
+	line-height: 20px;
 }
 
 .comments_template{
@@ -2400,17 +2421,16 @@ input[type="radio"]{
 	display: none;
 }
 
-#image-left-1{
+#image-left-1 > img{
 	float: left;
-	padding-right: 10px;
-	/*width: 40%;*/
-	height: 326px;
+	padding-right: 50px;
+	width: 288px;
 }
 
-#image-left-2{
+#image-left-2 > img{
 	float: left;
-	/*width: 40%;*/
-	height: 326px;
+	width: 380px;
+	
 }
 /*******Timer modifications*******/
 
@@ -2423,7 +2443,7 @@ input[type="radio"]{
 }
 
 hr.twitter{
-	background-color: #ccc;
+	background-color: #183757;
 border: 0;
 height: 1px;
 margin: 5px;
@@ -2470,8 +2490,8 @@ margin-bottom: 0;
 	margin-right: 10px;
 }
 .vote-container {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
-    margin: 40px 14%;
+   /* background: none repeat scroll 0% 0% rgb(24, 55, 87);*/
+    margin: 10px 14%;
     text-align: center;
     width: 72%;
     float: left;
@@ -2538,7 +2558,7 @@ input[type=radio].radio_voting{
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -2560,7 +2580,7 @@ input[type=radio].radio_voting{
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -2611,7 +2631,7 @@ input[type=radio].radio_voting{
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -2696,7 +2716,7 @@ input[type=radio].radio_voting{
 }
 
 .voting-num{width: 2.5%; height: 40px; vertical-align: middle; font-size: 20px;}
-.voting-img{width: 3.5%; height: 40px; vertical-align: middle; font-size: 20px;}
+.voting-img{width: 8.5%; height: 40px; vertical-align: middle; font-size: 20px;}
 .voting-img img{
 	max-width:100%;
 }
@@ -2722,7 +2742,7 @@ input[type=radio].radio_voting{
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -2759,7 +2779,7 @@ input[type=radio].radio_voting{
     float: left;
 }
 .widget-area {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+    background: #adcbec;
     float: right;
     width: 100%;
     margin-right: 0%;
@@ -2869,7 +2889,7 @@ padding-left: 10%;
 }
 
 .voting-num{width: 2.5%; height: 40px; vertical-align: middle; font-size: 16px;}
-.voting-img{width: 3.5%; height: 40px; vertical-align: middle; font-size: 16px;}
+.voting-img{width: 8.5%; height: 40px; vertical-align: middle; font-size: 16px;}
 .voting-img img{
 	max-width:100%;
 }
@@ -2926,7 +2946,7 @@ padding-left: 10%;
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -2963,7 +2983,7 @@ padding-left: 10%;
     float: left;
 }
 .widget-area {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+    background: #adcbec;
     float: right;
     width: 100%;
     margin-right: 0%;
@@ -2982,7 +3002,7 @@ padding-left: 10%;
     margin-right: 10px;
 }
 .widget-area {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+    background: #adcbec;
     float: right;
     width: 100%;
     margin: 0;
@@ -3182,7 +3202,7 @@ padding-left: 0%;
 }
 
 .voting-num{width: 2.5%; height: 40px; vertical-align: middle; font-size: 12px;}
-.voting-img{width: 3.5%; height: 40px; vertical-align: middle; font-size: 12px;}
+.voting-img{width: 8.5%; height: 40px; vertical-align: middle; font-size: 12px;}
 .voting-img img{
 	max-width:100%;
 }
@@ -3249,7 +3269,7 @@ padding-left: 0%;
 		float: left;
 	}
 	.widget-area {
-		background: #183757;
+		background: #adcbec;
 		float: right;
 		width: 38.041667%;
 		margin-right: 0%;
@@ -3286,7 +3306,7 @@ padding-left: 0%;
     float: left;
 }
 .widget-area {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+    background: #adcbec;
     float: right;
     width: 100%;
     margin-right: 0%;
@@ -3305,7 +3325,7 @@ padding-left: 0%;
     margin-right: 10px;
 }
 .widget-area {
-    background: none repeat scroll 0% 0% rgb(24, 55, 87);
+    background: #adcbec;
     float: right;
     width: 100%;
     margin: 0;
@@ -3528,7 +3548,7 @@ padding-left: 20%;
 }
 
 .voting-num{width: 2.5%; height: 40px; vertical-align: middle; font-size: 12px;}
-.voting-img{width: 3.5%; height: 40px; vertical-align: middle; font-size: 12px;}
+.voting-img{width: 8.5%; height: 40px; vertical-align: middle; font-size: 12px;}
 .voting-img img{
 	max-width:100%;
 }
@@ -3604,10 +3624,8 @@ line-height: 30px;
 
 
 .sharing-icons{
-	margin-right: 100px;
 	float: right;
-	margin-top: 2px;
-	margin-bottom: 20px;
+	margin: 2px 100px 20px 0px;
 }
 
 #redessociales {
@@ -3824,6 +3842,85 @@ input[type="submit"]:hover, input[type="reset"]:hover{
 
 div.wpcf7{padding-top: 30px;}
 
+.wrapper-home
+{
+	background: #fff;
+}
+
+/* Clearing floats */
+
+.wrapper-home:after {
+	clear: both;
+}
+
+.wrapper-home:before,
+.wrapper-home:after {
+	display: table;
+	content: "";
+}
 
 
+#social-icon-wrapper {
+  width: 276px; 
+  height: auto;
+  /*margin: 10px auto;*/
+}
 
+.social-icon {
+  display: block;
+  width: 85px; 
+  height: 84px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 5px;
+  text-align: left;
+  text-indent: -9999em;
+  /*background: transparent url(http://digital-hideaway.com/axis/wp-content/uploads/2013/11/axis-social-icon-square-sprite.png) 0 0 no-repeat;*/
+}
+
+
+#social-icon-sharer{
+	width: 60px;
+	position: absolute;
+}
+
+#twitter{
+	background: url(../twentytwelve/images/twit_01.gif);
+    width: 64px;
+  	height: 64px;
+	transition: all 0.8s ease
+}
+#twitter:hover{ 
+	background: url(../twentytwelve/images/twit_02.gif);
+    width: 64px;
+  	height: 64px;
+}
+
+#facebook{ 
+	background: url(../twentytwelve/images/fb_01.gif);
+    width: 64px;
+  	height: 64px; 
+  	transition: all 0.8s ease;}
+#facebook:hover{ 
+	background: url(../twentytwelve/images/fb_02.gif);
+    width: 64px;
+  	height: 64px;
+}
+
+#google-plus{ 
+	width: 64px;
+  	height: 64px;
+    background: url(../twentytwelve/images/google_01.gif);
+	transition: all 0.8s ease
+}
+#google-plus:hover{
+	width: 64px;
+  	height: 64px;
+    background: url(../twentytwelve/images/google_02.gif);
+}
+
+#social-icon-sharer img:hover{
+	width: 64px;
+  	height: 64px;
+    background: url(../twentytwelve/images/share_02.gif);
+}

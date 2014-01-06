@@ -14,11 +14,26 @@
 
 	<footer id="colophon" role="contentinfo">
 		<div class="sharing-icons">
-			<span class="share-this">Share this</span>
+			<!--<span class="share-this">Share this</span>
 			 <div id="redessociales">
 		          <a class="smedia facebook" title="Share on facebook" href="https://www.facebook.com/josernitos">Uno</a>
 		          <a class="smedia twitter" title="Share on twitter" href="http://www.twitter.com/josernitos">Dos</a>
 		          <a class="smedia gplus" title="Share on google" href="#">Tres</a>
+			</div>
+		    -->
+		    <div id="social-icon-wrapper" style="display: none;">
+    
+				  <a id="twitter" class="social-icon" href="https://www.twitter.com/zessx">twitter</a>
+				  
+				  <a id="facebook" class="social-icon" href="https://www.facebook.com/marchal.samuel">facebook</a>
+				 
+				  <a id="google-plus" class="social-icon" href="http://www.linkedin.com/pub/samuel-marchal/26/a73/584">google</a>
+				  
+			</div>
+
+			<div id="social-icon-sharer">
+				<span id ="share-this">Share this</span>
+				<img src="<?php bloginfo('url');?>/wp-content/themes/twentytwelve/images/share_01.gif"/>
 			</div>
 		</div>
 
@@ -170,6 +185,16 @@
 	      }
 	     });                       
 	});
+  </script>
+
+  <script>
+  	   jQuery(document).ready(function() {
+        jQuery('#social-icon-sharer img').click(function() {
+                //console.log("Im clicked nje");
+                jQuery('#social-icon-wrapper').fadeToggle();
+                jQuery('#social-icon-sharer').hide();
+        });
+    });
   </script>
 </body>
 </html>

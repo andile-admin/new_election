@@ -3,6 +3,7 @@
 Template Name: homepage
 */
 get_header(); ?>
+<div id="main" class="wrapper-home">
 <style type="text/css">
     .entry-header .entry-title {
         display: none;
