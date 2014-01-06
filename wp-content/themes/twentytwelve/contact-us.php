@@ -4,7 +4,7 @@ Template Name: Contact Us Page
 */
 ?>
 <?php get_header(); ?>
-
+<div id="main" class="wrapper-home">
 <div class="title-section">
     <p><?php wp_title();?></p>
 </div>
@@ -15,7 +15,7 @@ Template Name: Contact Us Page
 </div>-->
 <div id="container-contact">
 
-    <section id="leftcol" style="width: 520px;">
+    <section id="leftcol" >
 
         <span class="leave-message">Leave us a message</span>
 

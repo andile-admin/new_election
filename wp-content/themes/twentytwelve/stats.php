@@ -84,6 +84,14 @@ get_header(); ?>
                                         return $value;
                                     }
 
+                                    function doublemax($mylist){ 
+                                      $maxvalue=max($mylist); 
+                                      while(list($key,$value)=each($mylist)){ 
+                                        if($value==$maxvalue)$maxindex=$key; 
+                                      } 
+                                      return array("m"=>$maxvalue,"i"=>$maxindex); 
+                                    } 
+
                                     $total = mysql_query("SELECT SUM(votecount) AS total_count FROM wp_colorcounter");
                                     $row = mysql_fetch_assoc($total); 
                                     $sum = $row['total_count'];
@@ -115,13 +123,25 @@ get_header(); ?>
                                         */
                                         $the_perc = $row['votecount'] / $sum * 100;
                                         $final_perc = number_format($the_perc, 2);
+                                        $array  = array($final_perc);
+                                        $maximum_num = doublemax($array);
+                                        //var_dump($maximum_num);
+                                        foreach ($array as $key => $value) {
+                                          $result[$key] = $value['m'];
+                                        }
+                                        $max = max($result);
+                                        //echo '<pre>';
+                                         //   echo $max;
+                                        //echo '</pre>';
+                                        //$max_value = max($array);
+                                        //var_dump($max_value);
 
                                         $demogr = demographics($final_perc);
 
                                         //var_dump($demo);
                                         $check=0;
                                         if($check<1){
-                                            echo '<td class="leader-image"><img src="'.$site_link. '/wp-content/themes/twentytwelve/images/rounded_faces_30.png" /></td>';
+                                            echo '<td class="leader-image"><img src="'.$site_link. '/' . $row['stats_images'] .'" /></td>';
                                             $check++;
                                         }else{}
                                         echo '<td class="voting-percentage-image">' .$demogr. '</td>';

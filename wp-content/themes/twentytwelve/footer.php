@@ -23,12 +23,25 @@
 		    -->
 		    <div id="social-icon-wrapper" style="display: none;">
     
-				  <a id="twitter" class="social-icon" href="https://www.twitter.com/zessx">twitter</a>
+				<!--<a id="twitter" class="social-icon" href="https://www.twitter.com/zessx">twitter</a>-->
 				  
-				  <a id="facebook" class="social-icon" href="https://www.facebook.com/marchal.samuel">facebook</a>
-				 
-				  <a id="google-plus" class="social-icon" href="http://www.linkedin.com/pub/samuel-marchal/26/a73/584">google</a>
-				  
+				
+				<?php $share_url = get_permalink();?>
+
+				<!--<a id="share_button" class="fb-share-button" data-href="http://yworld.co.za" data-type="button"></a>-->	
+				
+				<!--<a id="share_button" class="social-icon" href="">facebook</a>-->
+
+				<a id="share_button" class="fb-share-button" title="Share on facebook" href="http://www.facebook.com/sharer.php?u=yworld.co.za"
+   						onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   					    alt="Share on Facebook">
+				</a>
+				<a id="twitter" class="social-icon" title="Share on twitter" href="http://twitter.com/home?status=<?php echo urlencode($share_url);?>"  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"></a>
+				<!--<a id="google-plus" class="social-icon" href="http://www.linkedin.com/pub/samuel-marchal/26/a73/584">google</a>-->
+				
+				<a id="google-plus" class="social-icon" title="Share on google-plus" href="https://plus.google.com/share?url=<?php echo urlencode($share_url);?>"
+onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false"></a>
+
 			</div>
 
 			<div id="social-icon-sharer">
@@ -53,12 +66,17 @@
 			                <a href="http://www.gautengonline.gov.za/Government/Pages/Departments.aspx" target="_blank"><img src="<?php bloginfo('url');?>/wp-content/uploads/2013/12/gauteng-online_06.png"/></a>     
 			            </span>
 			            
+			            <span class="gover-coms">
+			                <a href="" target="_blank"><img src="<?php bloginfo('url');?>/wp-content/themes/twentytwelve/images/government_03.png"/></a>     
+			            </span>
+
 			            <span class="iec-images">
 			                <a href="http://www.elections.org.za/content/" target="_blank"><img src="<?php bloginfo('url');?>/wp-content/uploads/2013/12/iec-image_35.png"/></a>     
 			            </span>
 			            <span class="gov-images">
 			                <a href="http://www.gov.za/" target="_blank"><img src="<?php bloginfo('url');?>/wp-content/uploads/2013/12/page2-gov_38.png"/></a>     
 			            </span>
+			 			            
 			        </div>
 			        </div>
 			        <!--Site Copyright Text END-->
@@ -130,6 +148,8 @@
 	});
 </script>
   <script src="<?php echo bloginfo('template_url'); ?>/js/responsiveslides.min.js"></script>
+
+  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>-->
   <script>
     jQuery(function () {
 
@@ -196,5 +216,23 @@
         });
     });
   </script>
+
+  <!--<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#share_button').click(function(e){
+				e.preventDefault();
+				FB.ui(
+				{
+					method: 'feed',
+					name: 'This is the content of the "name" field.',
+					link: 'http://localhost:8888/new_elections/',
+					//picture: 'http://www.hyperarts.com/external-xfbml/share-image.gif',
+					caption: 'This is the content of the "caption" field.',
+					description: 'This is the content of the "description" field, below the caption.',
+					message: ''
+				});
+			});
+		});
+</script>-->
 </body>
 </html>

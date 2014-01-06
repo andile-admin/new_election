@@ -138,7 +138,7 @@ class Twitter_Hashtag_Feed_Widget extends WP_Widget {
 				$status->text = preg_replace( '/(^|\s)#([a-z0-9_]+)/i', '$1<a href="https://twitter.com/search?q=%23$2&src=hash">#$2</a>', $status->text );	// Hyperlink #hashes
 				echo '<hr class="twitter">';
 				echo '<li>';
-				echo '<img class="twitter-imgs" src="http://newelections.dev/wp-content/uploads/2014/01/twitter-feed-image.jpg" />';
+				echo '<img class="twitter-imgs" src="http://localhost:8888/new_elections/wp-content/uploads/2014/01/twitter-feed-image.jpg" />';
 				echo '<a href="https://twitter.com/' . $status->user->screen_name . '" target="_blank">';
 				echo "@{$status->user->screen_name}</a>: " . $status->text;
 				echo '</li>';

@@ -5,7 +5,7 @@ Template Name: The Youtube
     global $wpdb; 
     get_header(); 
 ?>
-<div id="main" class="wrapper">
+<div id="main" class="wrapper-home">
 <style type="text/css">
     #menu-item-18.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-18 a{
         text-decoration: underline;
