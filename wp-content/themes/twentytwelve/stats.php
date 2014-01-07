@@ -126,10 +126,12 @@ get_header(); ?>
                                         $array  = array($final_perc);
                                         $maximum_num = doublemax($array);
                                         //var_dump($maximum_num);
-                                        foreach ($array as $key => $value) {
-                                          $result[$key] = $value['m'];
-                                        }
-                                        $max = max($result);
+                                        //foreach ($array as $key => $value) {
+                                        //  $result[$key] = $value['m'];
+                                        //}
+                                        //$max = max($result);
+                                        
+
                                         //echo '<pre>';
                                          //   echo $max;
                                         //echo '</pre>';
@@ -139,11 +141,11 @@ get_header(); ?>
                                         $demogr = demographics($final_perc);
 
                                         //var_dump($demo);
-                                        $check=0;
-                                        if($check<1){
-                                            echo '<td class="leader-image"><img src="'.$site_link. '/' . $row['stats_images'] .'" /></td>';
-                                            $check++;
-                                        }else{}
+                                        //$check=0;
+                                        //if($check<1){
+                                        //    echo '<td class="leader-image"><img src="'.$site_link. '/' . $row['stats_images'] .'" /></td>';
+                                        //    $check++;
+                                        //}else{}
                                         echo '<td class="voting-percentage-image">' .$demogr. '</td>';
                                         echo '<td class="voting-percentage">0 - ' . $final_perc . ' %</td>';
                                         echo '</tr>';

@@ -56,6 +56,7 @@ onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=
 			    <div class="center">
 			        <!--Site Copyright Text START-->
 			        <div class="copytext">
+			        	<span class="useful-links">Useful links</span>
 					  <div class="iec-banners-holder">
 			            
 			            <span class="enca-image">
